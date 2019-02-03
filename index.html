@@ -6,29 +6,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>About Me</title>
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--ASK ABOUT ICONS <link> rel="icon" href="/images/terminal_icon.png"</link> -->
 </head>
 <body>
+	<a class="skip-main" href="#main">Skip to main content</a>
 	<header> 
 		<nav>
 			<ul>
-				<li><a href="index.html">About Me</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="upcoming_projects.html">Upcoming Projects</a></li>
+				<li>
+					<a href="index.html" class="current">About Me</a>
+				</li>
+				<li>
+					<a href="projects.html">Projects</a>
+				</li>
+				<li>
+					<a href="upcoming_projects.html">Upcoming Projects</a>
+				</li>
 
 			</ul>
 		</nav>
-		<main>	<h1>About me</h1> 
-		</main> <!-- trying to add main content for tabbing return to this later -->
+			<h1>About me</h1> 
+		 <!-- trying to add main content for tabbing return to this later -->
 	
 	</header>
-		<p>
+	<main>
+		<p id="main" tabindex="-1">
 			
 			Hi, I'm Taika (he/him or they/them pronouns)<br>
 			<b>CS Student and Interdisciplinary Researcher</b><br>
 			Passion areas - Full stack development and continuous learning
 		</p>
 
-		<img src="images/me.jpg" alt="Me in a black sweater in front of the Pacific ocean">
+		<img src="images/me.jpg" alt="Me in a black sweater in front of the Pacific Ocean">
 
 		<p>
 			I love learning about other people's cultures and traveling to historical sites when I can. I have participated in martial arts -- shorin-ryu karate and then taekwondo -- since I was a child so one of my proudest accomplishments is keeping up with that.
@@ -43,6 +54,7 @@
 		<p>
 			After graduating, I applied for research positions and graduate school rather than clinical roles. I wanted to increase my technical and critical thinking skills. Through my work in research I have strengthened my passion in increasing the accessibility of resources and products to others.
 		</p>
+	</main>
 	<footer>
 		&copy; Taika Augustaitis <br>
 	</footer>

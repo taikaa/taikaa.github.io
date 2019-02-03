@@ -1,0 +1,32 @@
+
+ul {
+	margin: 0;
+	padding: 0;
+	width: 150px;
+	background-color: #f1f1f1;
+}
+/* navigation bar edits */
+li a {
+	display: block;
+	color: #000000;
+	padding: 20px;
+	text-decoration: none;
+	font-family: Helvetica, Verdana; 
+}
+
+li a:hover {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+p {
+	font-family: Helvetica, Verdana;
+}
+
+.current {
+	text-decoration: underline;
+}
+
+h1 {
+	font-family: Helvetica, Verdana;
+}
