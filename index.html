@@ -10,28 +10,48 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<!--added font awesome --> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>src="js/nav.js"</script>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<!--added google analytics --> 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137797563-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-137797563-1');
+	</script>
+
 
 </head>
-<body>
+<body onload='typeWriter()'>
 	<a class="skip-main" href="#main">Skip to main content</a>
 	<header> 
 		<div class = "social social_header">
 						<a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
 		</div>
+		
+		
+		<button id="hamburger">&#9776;</button>
+
 		<nav>
 			<ul>
 				<li>
-					<a href="index.html" class="current">About Me</a>
+					<a href="index.html" class="current nav_item">About Me</a>
 				</li>
 				<li>
-					<a href="projects.html">Projects</a>
+					<a href="projects.html" class="nav_item">Projects</a>
 				</li>
 				<li>
-					<a href="upcoming_projects.html">Upcoming Projects</a>
+					<a href="upcoming_projects.html" class="nav_item">Upcoming Projects</a>
 				</li>
 				<li>
-					<a href="media/resume.pdf" target="_blank">Resume</a>
+					<a href="media/resume.pdf" target="_blank" class="nav_item">Resume</a>
 				</li>
 
 			</ul>
@@ -42,7 +62,9 @@
 		<!-- placing in background -->
 		<div class="background"></div>
 		<div class="about_me">
-		<h1>About me</h1> 
+		<h1 class="typewriter animation"></h1> 
+		<div class="grid-container">
+		<div class="col_1">
 		<p>
 			
 			Hi, I'm Taika (he/him or they/them pronouns)<br>
@@ -67,13 +89,42 @@
 		</p>
 	</div> <!-- end of first div --> 
 	<!-- second div for formatting -->
+	
+
+	<!-- <div class="col_2"> -->
 	<div class="pyramid">
-		<img src="images/pyramid.jpg" alt="The pyramid of the moon at Teotihuacan">
+			<img src="images/pyramid.jpg" alt="The pyramid of the moon at Teotihuacan">
 	</div>
+	<div class="flip-card">
+		<div class="card-animation">
+		<div class="card-front">Click for temp</div>
+		<div class='card-back'>
+			<p>Temperature</p>
+		</div>
+		</div>
+	</div>
+<!-- 	</div> -->
+</div>
+
 	</main>
 	<footer>
 		&copy; Taika Augustaitis <a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
 	</footer>
+	<script>
+		$('#hamburger').click(function() {
+			// $()
+			$('ul li').toggle('slow');
+		})
+
+		window.addEventListener('resize', function() {
+			console.log($('nav').css('display'))
+			if ($(window).width() > 780 && $('nav').css('display', 'none')) {
+				location.reload()
+			}
+		})
+
+	</script>
+	<script type="text/javascript" src="js/typewriter.js"></script>
 	
 </body>
 </html>
