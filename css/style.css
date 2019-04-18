@@ -278,6 +278,13 @@ div.pyramid img {
 	/*margin-bottom: 40%;*/
 }
 
+div#flip-card-front {
+	visibility: hidden;
+}
+
+div#flip-card-reduce {
+	display: none;
+}
 
 
 	
@@ -287,16 +294,24 @@ div.pyramid img {
 
 
 div.ux {
-	margin-left: 1%;
-	margin-right: 1%;
+	margin-left: 7%;
+	margin-right: 7%;
 	padding-bottom: 4%;
 	/*padding-top: 2%;*/
 }
+
+p.ux, ul.ux {
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+
 
 img.ux {
 	display: block;
 	margin: auto;
 	border: 1px solid black;
+	margin-bottom: 60px;
 }
 
 img.companalysis {
@@ -309,70 +324,88 @@ img.companalysis {
     grid-template-columns: 1fr;
     grid-gap: 10px;
     justify-items: center;
+    padding-bottom: 4%;
 }
 
 .ux_grid img {
 	border: 1px solid black;
 }
 
-
-/* -------- OZ Video Player ------- */
-/*.ozplayer-container {
-	padding-bottom: 5% !important;
-	margin: 5% 10% 0 10%;
-	width: 100%;
-	height: 100%;
-}*/
-
-
 div.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	visibility: hidden;
 }
 
-
-div.oz-modal {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
- /* height: 80%;*/
+#ozplayer-1-container {
+	visibility: hidden !important;
 }
 
-.close-modal {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  display: block;
-  font-size: 40px;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-  color: black;
-  cursor: pointer;
-}
-
-.ozplayer-container {
-	/*margin: auto;*/
-	margin-left: 100px;
-	margin-top: 70px;
+button.modal-button {
+	visibility: hidden;
 	display: block;
+	margin: auto;
+	margin-bottom: 60px;
+	font-family:'Roboto',sans-serif;
+  background-color: #534caf;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+ /* display: inline-block;*/
+  font-size: 16px;
 }
 
-.ozplayer {
-	margin: auto !important;
+
+button.modal-button:hover{
+ text-shadow: 0 0 2em rgba(255,255,255,1);
+ color: #FFFFFF;
+ /*background-color: #eee;*/
+ background-color: #333333;
+ cursor: pointer;
 }
 
+/* accordion stuff on UX page */
+.accordion {
+  background-color: #eee;
+  display: inline-block;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion h2 {
+	display: inline-block;
+	width: 40%;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.accordion-content {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+.accordion-plus {
+	float: right;
+	font-size: 25px;
+	padding-right: 2%;
+	/*vertical-align: middle;*/
+}
+
+.accordion-arrow {
+	/*vertical-align: middle;*/
+}
 
 
 /* ----end ux page ----*/
@@ -385,22 +418,6 @@ div.violence {
 	padding-top: 2%;
 }
 
-/*div.violence img {
-	height: 40vh;
-}
-
-div.violence.infographic {
-	display: inline-block;
-	width: 90%;
-	margin: auto;
-
-}
-
-div.violence.infographic img{
-	min-height: 40vh;
-	margin: auto;
-	display: block;
-}*/
 
 div.infographic_grid {
 	display: grid;
@@ -537,16 +554,6 @@ nav li a {
 	display: block;
 }
 
-/*div.about_me {
-	width:40%;
-	display: inline-block;
-}*/
-
-/*div.pyramid {
-	/*width: 300px;*/
-	/*display: inline-block;*/
-	/*margin-left: 15%;*/ /* added  4-4 */
-/*}*/
 
 div.grid-container {
 	display: grid;
@@ -585,6 +592,10 @@ div.flip-card {
 	perspective: 1000px;
 }
 
+div#flip-card-front {
+	visibility: visible;
+}
+
 div.card-animation {
 	position: relative;
 	height: 100%;
@@ -607,6 +618,7 @@ div.card-front, div.card-back {
 	/*display: inline-block;*/
 }
 
+
 div.card-back {
 	background-color: grey;
 	color: black;
@@ -625,14 +637,79 @@ div.card-back {
 	position: relative;
 	margin-right: 1%;
 }
-
+ /* ----- UX page ------- */
 .ux_grid {
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    max-width: 50% !important;
+	margin: 0 auto;
+	grid-column-gap: 20px;
     grid-column-gap: 10px;
 }
 
+/* OZ player video */
+/* -------- OZ Video Player ------- */
 
+button.modal-button {
+	visibility: visible;
+}
+
+div.modal {
+	visibility: visible;
+}
+
+
+div.modal {
+  display: none; 
+  visibility: visible;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+div.oz-modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+ /* height: 80%;*/
+}
+
+.close-modal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  font-size: 40px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  cursor: pointer;
+}
+
+.ozplayer-container {
+	/*margin: auto;*/
+	margin-left: 100px;
+	margin-top: 70px;
+	display: block;
+}
+
+.ozplayer {
+	margin: auto !important;
+}
+
+
+/* ---------violence research page --------- */
 div.infographic_grid {
 	grid-template-columns: 25% 1fr 1fr 25%;
 	align-items: left;
@@ -669,6 +746,7 @@ div.upcoming_grid {
 	color: none;
 	background-color: none;
 }
+/* gets rid of animation that changes opacity on the projects page */
   div.projects img {
 	opacity: 1;
 }
@@ -677,4 +755,18 @@ i.social:hover {
 	opacity: 1;
 	color: black;
 }
+
+/* makes it so there is no a longer a flip card */
+div#flip-card-front {
+	visibility: hidden;
+}
+
+div.flip-card {
+	visibility: hidden;
+	}
+
+/*#flip-card-reduce {
+	display: block;
+}*/
+
 }
