@@ -380,7 +380,7 @@ button.modal-button:hover{
   transition: 0.4s;
 }
 
-.accordion div {
+.accordion h2 {
 	display: inline-block;
 	width: 40%;
 	font-size: 1.5em;
