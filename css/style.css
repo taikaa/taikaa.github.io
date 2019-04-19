@@ -621,7 +621,7 @@ div.card-front, div.card-back {
 
 
 div.card-back {
-	background-color: grey;
+	background-color: #f1f1f1;
 	color: black;
 	transform: rotateX(180deg);
 	font-size: 20px;
