@@ -71,16 +71,17 @@
 	<footer>
 		&copy; Taika Augustaitis <a href="https://github.com/taikaa" target="_blank" aria-label="Link to my GitHub profile"> <i class="fab fa-github fa-3x social"></i></a>
 	</footer>
+
 	<script>
 		$('#hamburger').click(function() {
-			// $()
+			
 			$('ul li').toggle('slow');
 		})
 
 		window.addEventListener('resize', function() {
 			console.log($('nav').css('display'))
-			if ($(window).width() > 780 && $('nav').css('display', 'none')) {
-				location.reload()
+			if ($(window).innerWidth() > 780 && $('nav li').attr('style') == 'display: none;') {
+				$('ul li').toggle();
 			}
 		})
 

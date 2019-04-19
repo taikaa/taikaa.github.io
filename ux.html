@@ -180,12 +180,12 @@
 
 		<!-- added lightbox -->
 		<div class='ux_grid'>
-			<a href="images/2z.png" data-lightbox='ux_set' data-alt='app login'><img src="images/2z.png" alt="app login"></a>
-			<a href="images/4z.png" data-lightbox='ux_set' data-alt='app homepage'> <img src="images/4z.png" alt="app homepage"></a>
-			<a href="images/5az.png" data-lightbox='ux_set' data-alt='app My Profile page'> <img src="images/5az.png" alt="app My Profile page"></a>
-			<a href="images/7z.png" data-lightbox='ux_set' data-alt='app browse items'> <img src="images/7z.png" alt="app browse items"></a>
-			<a href="images/9z.png" data-lightbox='ux_set' data-alt='app view item for sale'> <img src="images/9z.png" alt="app view item for sale"></a>
-			<a href="images/19z.png" data-lightbox='ux_set' data-alt='app view cart'><img src="images/19z.png" alt="app view cart"></a>
+			<a href="images/2z.png" data-lightbox='ux_set' data-alt='app login' data-title='Click sides of image or left and right arrow keys to switch image'><img src="images/2z.png" alt="app login"></a>
+			<a href="images/4z.png" data-lightbox='ux_set' data-alt='app homepage' data-title='Click sides of image or left and right arrow keys to switch image'> <img src="images/4z.png" alt="app homepage"></a>
+			<a href="images/5az.png" data-lightbox='ux_set' data-alt='app My Profile page' data-title='Click sides of image or left and right arrow keys to switch image'> <img src="images/5az.png" alt="app My Profile page"></a>
+			<a href="images/7z.png" data-lightbox='ux_set' data-alt='app browse items' data-title='Click sides of image or left and right arrow keys to switch image'> <img src="images/7z.png" alt="app browse items"></a>
+			<a href="images/9z.png" data-lightbox='ux_set' data-alt='app view item for sale' data-title='Click sides of image or left and right arrow keys to switch image'> <img src="images/9z.png" alt="app view item for sale"></a>
+			<a href="images/19z.png" data-lightbox='ux_set' data-alt='app view cart' data-title='Click sides of image or left and right arrow keys to switch image'><img src="images/19z.png" alt="app view cart"></a>
 		</div>
 
 	<!-- 		<div class="ux_grid">
@@ -312,10 +312,11 @@
 
 		window.addEventListener('resize', function() {
 			console.log($('nav').css('display'))
-			if ($(window).width() > 780 && $('nav').css('display', 'none')) {
-				location.reload()
+			if ($(window).innerWidth() > 780 && $('nav li').attr('style') == 'display: none;') {
+				$('ul li').toggle();
 			}
 		})
+
 	</script>
 	<script src='js/lightbox.js'></script>
 	<script>
