@@ -16,34 +16,34 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+// Commenting out the Weather API
+// function weatherBalloon( cityID ) {
+//   var key = '4d2453f3e759e62791f60c330479bb71';
+//   fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+//   .then(function(resp) { return resp.json() }) // Convert data to json
+//   .then(function(data) {
+//     // console.log(data);
+//     drawWeather(data);
+//   })
+//   .catch(function() {
+//     // catch any errors
+//   });
+// }	
 
-function weatherBalloon( cityID ) {
-  var key = '4d2453f3e759e62791f60c330479bb71';
-  fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
-  .then(function(resp) { return resp.json() }) // Convert data to json
-  .then(function(data) {
-    // console.log(data);
-    drawWeather(data);
-  })
-  .catch(function() {
-    // catch any errors
-  });
-}	
-
-function drawWeather( d ) {
-var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
-var flipCardReduce = document.getElementById('flip-card-reduce');
-var flipCardReduceStyle = flipCardReduce.currentStyle || window.getComputedStyle(flipCardReduce);
-document.getElementById('temp').innerHTML = celcius + '&deg;' + 'C';
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    flipCardReduce.style.display = 'block';
-    flipCardReduce.innerHTML = 'Teotihuacan ' + celcius + '&deg;' + 'C';
-    flipCardReduce.style.gridColumn = '2/3';
-    flipCardReduce.style.gridRow = '5/6';
-    console.log(flipCardReduce);
-  }
-}
+// function drawWeather( d ) {
+// var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+// var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+// var flipCardReduce = document.getElementById('flip-card-reduce');
+// var flipCardReduceStyle = flipCardReduce.currentStyle || window.getComputedStyle(flipCardReduce);
+// document.getElementById('temp').innerHTML = celcius + '&deg;' + 'C';
+// if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+//     flipCardReduce.style.display = 'block';
+//     flipCardReduce.innerHTML = 'Teotihuacan ' + celcius + '&deg;' + 'C';
+//     flipCardReduce.style.gridColumn = '2/3';
+//     flipCardReduce.style.gridRow = '5/6';
+//     console.log(flipCardReduce);
+//   }
+// }
 
 
 typeWriter();
