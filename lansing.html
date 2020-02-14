@@ -1,0 +1,211 @@
+<!--ask about whether I should do mini galleries or have the pictures side by side -->
+<!--should I do a gallery of XD?-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CID Consulting</title>
+	<meta name = 'viewport' content='width=device-width, initial-scale=1'>
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>src="js/nav.js"</script>
+	<!-- <link rel="stylesheet" href="css/lightbox.css"> -->
+	<link rel="stylesheet" href="css/lightbox.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137797563-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-137797563-1');
+	</script>
+</head>
+<body>
+	<a class="skip-main" href="#main">Skip to main content</a>
+	<header> 
+		<div class = "social social_header">
+						<a href="https://github.com/taikaa" target="_blank" aria-label="Link to my GitHub profile"> <i class="fab fa-github fa-3x social"></i></a>
+		</div>
+
+		<button id="hamburger">&#9776;</button>
+
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">About Me</a>
+				</li>
+				<li>
+					<a href="projects.html">Projects</a>
+				</li>
+				<li>
+					<a href="upcoming_projects.html">Upcoming Projects</a>
+				</li>
+				<li>
+					<a href="media/resume.pdf" target="_blank">Resume</a>
+				</li>
+
+			</ul>
+		</nav>
+	
+	</header>
+	<main id="main"> 
+		
+		<div class='ux'>
+			<h1>Citizen Interaction Design: Lansing Property Assessment</h1>
+			<p class=subtitle>Property Assessment is an Art and a Science.</p><br>
+
+			<div tabindex = "0" class='accordion'><h2>Problem Context</h2><span class='accordion-plus'>+</span></div>
+			<div class='accordion-content'>
+				<p>
+					As part of a semester team project, my team worked alongside offices in the City of Lansing (Michigan's capital). Our team partnered with the Property Assessment Office to understand their work and identify ways to increase the number of properties they assess and improve property value accuracy. Property value and tax assessment is as much an art as it a science meaning has historically not been easy for the city to educate tax payers what the Assessing Office's role is. Property assessment is as much an art as it a science, and the laws and methods for calculating property taxes are complex and hard to understand
+
+				</p>
+			</div>
+		
+		</div>
+
+		<div class="ux">
+			<div class='accordion' tabindex="0"><h2>Research Methods</h2><span class='accordion-plus'>+</span></div>
+			<div class='accordion-content'>
+				
+				<p>	
+					Phase 1: Stakeholder Interviews <br>
+					I conducted a focus group with the city assessors and another interview with the Chief Assessing Officer to understand the clients' workflow and role. We also interviewed a Board Member who handles citizen appeals when property taxes are appealed to the city. <br>
+					The following patterns emerged from the interviews: <br>
+					<ul>
+						<li>
+							Lansing residents are not engaged nor do they fully understand the property assessment details and processes.
+						</li>
+						<li>
+							It is challenging to connect with residents due to property owner’s limited availability and a general distrust of people evaluating one’s personal property
+						</li>
+						<li>
+							The Assessing Office was unsure of what is the best use of their resources to increase citizen engagement and property information collection
+						</li>
+
+					</ul>
+
+ 
+				</p>
+				<p>
+					Phase 2: Quantitative Survey <br>
+					We wanted to validate stakeholder assumptions about tax payers by disseminating a survey directly to citizens. The survey was broadcasted using the city's social media pages as well as made available on a desktop at the office for walk-in visitors. This method was selected over in person engagement due to constraints of not being able to offer participants incentive for participation. We wanted to avoid selection bias for socioeconomically advantaged taxpayers. <br>
+					Our survey findings in brief were (N = 48 responses): <br>
+					<ul>
+						<li>
+							Respondents were interested in learning more about how their property value is assessed.
+						</li>
+						<li>
+							Respondents were open to receiving Asessing Office communications through online and postal methods.
+						</li>
+					</ul>
+
+				</p>
+				<p>
+					Phase 3: Market Research <br>
+					We researched potential external stakeholders to ingegrate into this project. City realtors, the website vendor, and the marketing team were identified as potential partners. We also interviewed a BSA Online database vendor representative to get an idea of the capabilities that the current tax information query system possesses. We also compared the workflow and tool configuration to other medium sized Michigan cities and townships. After exploring options, it seemed that the website vendor and marketing team were essential to address citizen needs.  
+				</p>
+			</div>
+
+		</div>
+
+
+		<img class="companalysis" src="images/lansingcitizens.png" alt="A pie chart of citizen findings with some selected direct quotes from the survey responses expressing that homeowners do not understand property assessment">
+		<br>
+
+		<div class="ux">
+			
+			<div class='accordion' tabindex="0"><h2>Design Conceptualizations</h2><span class='accordion-plus'>+</span></div>
+			
+			<div class='accordion-content'>
+				<p>
+					After reviewing all of the data and constructing personas, my three teammates and I first individually created rapid prototypes to generate many different potential solutions to citizen issues. I created a revamped approach to the assessors' doorhanger system and an property assessment appointment scheduling system using a Drupal plugin. As a team we devised a QOC schema and scored each high level prototype idea.  
+				</p> 
+				<p>
+					Due to this context, we conceptualized a multi-pronged and sustainable solution to the client's and citizens' needs. We wanted to address the needs of collecting more information using access points already in place and to enable citizens to utilize online tools to further empower them to access digestible, relevant information.
+				</p><br>
+				<h2>Tools Overview</h2>
+				<p>
+					1) Redesigned Doorhanger <br>
+					Built upon the idea of implementing a low tech solution and incorporating the client’s current practices of leaving door hangers on property owner’s doors, we redesigned the existing door hanger to be more vibrant and informative. The new door hangers will include a detachable calling card, prepaid postcard to collect valuable property information, and QR codes to interact with other digital educational and information collection tools
+				</p>
+
+				<p>
+					2) Interactive Timeline <br>
+					The interactive timeline provides an overview of annual assessing tasks and allows users to add deadlines for some events to their e-calendar. Currently, property owners need to scour through multiple web pages and pdf documents to learn about important deadlines and property assessment information. This tool distills and organizes that information in an easy to consume format. The interactive timeline is also designed to be embedded or published on the AO door hangers, social media posts, and website. 
+				</p>
+				<p>
+					3) The Property Portal App <br>
+					A mobile friendly web/application that extends property information, documents, and information tools to property owners and the AO staff. This application serves as a repository for news, FAQs, information collection tools, as well as a communication and appointment scheduling tool for property owners and the AO. 
+				</p>
+			</div>
+			
+		</div>
+
+		<div>
+				
+				
+				<img class="ux" src="images/doorhanger.png" alt="Brainstorming sketches ranging from a mobile app to a machine that transforms old clothes into new ones">
+
+				<img class="ux" src="images/timeline.png" alt="Brainstorming sketches ranging from a mobile app to a machine that transforms old clothes into new ones">
+
+				<img class="ux" src="images/pp_app.png" alt="Brainstorming sketches ranging from a mobile app to a machine that transforms old clothes into new ones">
+		
+		</div>
+		
+
+		<div class="ux">
+			<div class='accordion' tabindex="0"><h2>Ongoing Project</h2><span class='accordion-plus'>+</span></div>
+			<div class='accordion-content'>
+				<p>
+					Our semester came to an end working with our client. We delivered a sustainability report on how they can continue the project this Spring. We also gave a lightning talk at the State Capital for citizens and civil employees. We recommended rolling out the revamped door hangers first and then assess success by the # of cards returned and website analytics. Meanwhile a combination of the website vendor and summer interns can work on implementing the clickable timeline. 
+				</p>
+			</div>
+		
+		</div>
+
+	</main>
+	<footer>
+		&copy; Taika Augustaitis <a href="https://github.com/taikaa" target="_blank" aria-label="Link to my GitHub profile"> <i class="fab fa-github fa-3x social"></i></a>
+	</footer>	
+	<script>
+		$('#hamburger').click(function() {
+			// $()
+			$('ul li').toggle('slow');
+		})
+
+		window.addEventListener('resize', function() {
+			console.log($('nav').css('display'))
+			if ($(window).innerWidth() > 780 && $('nav li').attr('style') == 'display: none;') {
+				$('ul li').toggle();
+			}
+		})
+
+	</script>
+	<script src='js/lightbox.js'></script>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+		    this.classList.toggle("active");
+		    var panel = this.nextElementSibling;
+		    if (panel.style.display === "block") {
+		      panel.style.display = "none";
+		    } else {
+		      panel.style.display = "block";
+		    }
+		  });
+		}
+</script>
+</body>
+</html>
